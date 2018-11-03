@@ -1,8 +1,9 @@
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
+const indexRouter = require("./routes/index.js")
+const userRouter = require("./routes/users")
 
-app.get('/', function (req, res) {
-    res.send("hello world")
-})
+app.use('/', indexRouter)
+app.use('/users', userRouter)
 
-app.listen(3000)
+app.listen(3000);

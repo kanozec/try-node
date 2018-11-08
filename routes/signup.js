@@ -8,7 +8,7 @@ router.get('/', checkNotLogin, function (req, res, next) {
 })
 
 router.post('/', checkNotLogin, function (req, res, next) {
-  res.send('SignpUp')
+  res.send('SignUp')
 })
 
 module.exports = router
